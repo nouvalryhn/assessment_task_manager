@@ -13,6 +13,10 @@ npm run dev
 
 Buka `http://localhost:5173`. Perintah tersebut menjalankan Express di port `3001` dan Vite di port `5173`. Untuk menjalankan secara terpisah, gunakan `npm run dev -w server` dan `npm run dev -w client` pada dua terminal. Vite meneruskan request `/api` ke Express.
 
+## Situs belajar statis
+
+Buka `study/index.html` langsung di browser. Tidak perlu server, npm, atau koneksi internet. Panduan berbahasa Indonesia ini membahas spesifikasi task, model data, transisi status, audit log, API, konsistensi, frontend, test, dan trade-off. Ada simulator status dan kuis untuk memeriksa pemahaman. Simulator berjalan sepenuhnya di browser dan tidak mengubah data aplikasi utama.
+
 Perintah pemeriksaan:
 
 ```bash
@@ -61,4 +65,4 @@ Jika sistem membesar, bagian pertama yang saya refactor adalah `FileTaskStore` k
 
 ## Penggunaan AI
 
-AI membantu menyusun struktur proyek, implementasi awal React/Express, test, dan README. Saya memvalidasi hasilnya dengan typecheck backend/frontend, build backend/frontend, serta test aturan domain. Test integrasi API juga disediakan di `server/test/api.test.ts`; lingkungan pengerjaan ini menolak pembukaan port loopback, sehingga test tersebut perlu dijalankan di lingkungan biasa. Semua asumsi dan batasan teknis yang tersisa tercatat di atas dan harus dapat saya jelaskan saat review.
+AI membantu menyusun struktur proyek, implementasi awal React/Express, situs belajar statis, test, dan README. Saya memvalidasi aplikasi dengan typecheck backend/frontend, build backend/frontend, serta test aturan domain. Untuk situs belajar, saya memeriksa sintaks JavaScript, tautan/ID HTML, dan menguji alur simulator serta kuis dengan DOM tiruan. Test integrasi API juga disediakan di `server/test/api.test.ts`; lingkungan pengerjaan ini menolak pembukaan port loopback, sehingga test tersebut perlu dijalankan di lingkungan biasa. Semua asumsi dan batasan teknis yang tersisa tercatat di atas dan harus dapat saya jelaskan saat review.
