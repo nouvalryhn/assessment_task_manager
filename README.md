@@ -14,6 +14,7 @@ pnpm dev
 Bila sebelumnya `pnpm install` dijalankan saat workspace belum dikonfigurasi, jalankan lagi dari root proyek agar dependensi `client` dan `server` ikut terpasang.
 
 Buka `http://localhost:5173`. Perintah tersebut menjalankan Express di port `3001` dan Vite di port `5173`. Untuk menjalankan secara terpisah, gunakan `pnpm --filter server dev` dan `pnpm --filter client dev` pada dua terminal. Vite meneruskan request `/api` ke Express.
+Backend perlu dijalankan ulang setelah file server diubah; frontend memakai hot reload dari Vite.
 
 ## Situs belajar statis
 
