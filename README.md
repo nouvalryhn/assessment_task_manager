@@ -4,25 +4,27 @@ Mini Task Manager untuk tim internal. User dapat membuat task, memajukan status 
 
 ## Menjalankan aplikasi
 
-Prasyarat: Node.js 20+ dan npm.
+Prasyarat: Node.js 20+ dan pnpm 11.
 
 ```bash
-npm install
-npm run dev
+pnpm install
+pnpm dev
 ```
 
-Buka `http://localhost:5173`. Perintah tersebut menjalankan Express di port `3001` dan Vite di port `5173`. Untuk menjalankan secara terpisah, gunakan `npm run dev -w server` dan `npm run dev -w client` pada dua terminal. Vite meneruskan request `/api` ke Express.
+Bila sebelumnya `pnpm install` dijalankan saat workspace belum dikonfigurasi, jalankan lagi dari root proyek agar dependensi `client` dan `server` ikut terpasang.
+
+Buka `http://localhost:5173`. Perintah tersebut menjalankan Express di port `3001` dan Vite di port `5173`. Untuk menjalankan secara terpisah, gunakan `pnpm --filter server dev` dan `pnpm --filter client dev` pada dua terminal. Vite meneruskan request `/api` ke Express.
 
 ## Situs belajar statis
 
-Buka `study/index.html` langsung di browser. Tidak perlu server, npm, atau koneksi internet. Panduan berbahasa Indonesia ini membahas spesifikasi task, model data, transisi status, audit log, API, konsistensi, frontend, test, dan trade-off. Ada simulator status dan kuis untuk memeriksa pemahaman. Simulator berjalan sepenuhnya di browser dan tidak mengubah data aplikasi utama.
+Buka `study/index.html` langsung di browser. Tidak perlu server, pnpm, atau koneksi internet. Panduan berbahasa Indonesia ini membahas spesifikasi task, model data, transisi status, audit log, API, konsistensi, frontend, test, dan trade-off. Ada simulator status dan kuis untuk memeriksa pemahaman. Simulator berjalan sepenuhnya di browser dan tidak mengubah data aplikasi utama.
 
 Perintah pemeriksaan:
 
 ```bash
-npm test
-npm run typecheck
-npm run build
+pnpm test
+pnpm typecheck
+pnpm build
 ```
 
 Data lokal disimpan di `server/data/tasks.json` (dibuat otomatis dan tidak masuk Git). Dari folder `server`, lokasi dapat diubah dengan `DATA_FILE=/path/to/tasks.json`; port API dapat diubah dengan `PORT=3001`. Jika port API diubah, sesuaikan proxy pada `client/vite.config.ts`.

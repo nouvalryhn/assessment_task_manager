@@ -146,10 +146,10 @@
           <div class="chapter-heading"><span class="chapter-number">08 / TEST</span><h2 id="pengujian-title">Uji aturan, bukan jumlah fitur</h2></div>
           <p>Test yang bernilai adalah test yang dapat menangkap rusaknya invarian. Untuk task ini, cek perilaku akhir task <em>dan</em> log setelah setiap skenario.</p>
           <div class="test-cases"><div><span>01</span><p>Task baru berstatus <code>to_do</code>; belum ada log status.</p></div><div><span>02</span><p>Perpindahan satu langkah menghasilkan tepat satu log dengan actor dan status benar.</p></div><div><span>03</span><p>Request status sama diulang; jumlah log tetap.</p></div><div><span>04</span><p>Lompatan atau status mundur ditolak; task dan log tetap seperti semula.</p></div><div><span>05</span><p>Task dihapus; tidak muncul di daftar aktif, tetapi log tetap ada setelah restart.</p></div><div><span>06</span><p><code>expectedStatus</code> stale ditolak tanpa perubahan data.</p></div></div>
-          <div class="code-sample"><div class="code-caption"><span>JALANKAN PEMERIKSAAN</span><span>terminal</span></div><pre><code>npm install
-npm test
-npm run typecheck
-npm run build</code></pre></div>
+          <div class="code-sample"><div class="code-caption"><span>JALANKAN PEMERIKSAAN</span><span>terminal</span></div><pre><code>pnpm install
+pnpm test
+pnpm typecheck
+pnpm build</code></pre></div>
         </section>
 
         <section class="chapter" id="review" aria-labelledby="review-title">
