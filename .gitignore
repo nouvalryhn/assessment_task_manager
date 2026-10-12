@@ -4,3 +4,4 @@ dist/
 server/data/
 server/.test-build/
 .DS_Store
+study/
